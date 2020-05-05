@@ -151,7 +151,7 @@ train_mle_op = train_mle.apply_gradients(m_capped_gvs)
 
 #for check points.
 saver = tf.train.Saver()
-save_dir = '../checkpoints/'
+save_dir = './checkpoints/'
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 save_path = os.path.join(save_dir, "best_validation")

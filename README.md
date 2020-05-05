@@ -22,19 +22,19 @@ The command lines for SAFE and baselines go as follow
 
 * **SAFE** 
 ```
-    python framework/safe.py $1
+    python models/safe.py $1
 ```
 
 * **M-LSTM** 
 
 ```
-    python framework/base_rnn.py $1
+    python models/base_rnn.py $1
 ```
 
 * **CPH & SVM** 
 
 ```
-    python framework/safe_baselines.py $1
+    python models/safe_baselines.py $1
 ```
 
 **where** *$1* refers to datasets on which the model runs, and it can be assigned as 'twitter' or 'wiki'.
@@ -42,7 +42,7 @@ The command lines for SAFE and baselines go as follow
 
 * **Weibull & other distributions**
 ```
-    python framework/safe_distr.py $1 $2
+    python models/safe_distr.py $1 $2
 ```
 
 **where** *$1* refers to the corresponding distributions and it can be assigned as 'exp' (exponential), 'ray' (Rayleigh) and 'poi' (poisson); *$2* denotes the datasets, 'twitter' or 'wiki'.

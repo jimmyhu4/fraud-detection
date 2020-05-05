@@ -12,6 +12,13 @@ global last_improvement
 global require_improvement
 from collections import defaultdict
 
+# save np.load
+np_load_old = np.load
+
+# modify the default parameters of np.load
+np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
+
+
 # load data
 #
 if len(sys.argv) != 2:
@@ -20,7 +27,7 @@ if len(sys.argv) != 2:
 
 if sys.argv[1] == "twitter":
 
-    source_path = "../twitter/"
+    source_path = "./twitter/"
     X_train = np.load(source_path + "X_train_var.npy")
     T_train = np.load(source_path + "T_train_var.npy")
     C_train = np.load(source_path + "C_train_var.npy")
@@ -37,7 +44,7 @@ if sys.argv[1] == "twitter":
 
 elif sys.argv[1] == "wiki":
 
-    source_path = "../wiki/v8/"
+    source_path = "./wiki/v8/"
     X_train = np.load(source_path + "X_train.npy")
     T_train = np.load(source_path + "T_train.npy")
     C_train = np.load(source_path + "C_train.npy")

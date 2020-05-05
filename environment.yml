@@ -11,5 +11,6 @@ dependencies:
 - pip:
   - matplotlib
   - scikit-learn
-  - keras
+  - keras==2.1.5
   - tensorflow==1.5.0
+  - lifelines
